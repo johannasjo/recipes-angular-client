@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Uppgift
+
+Björns Angular-uppgift:
+
+Bygg en receptapplikation som tar in data från ett api, t ex https://developer.edamam.com/edamam-recipe-api Bygg en komponent som kan visa antal recept ur en specifik måltidstyp, till exempel: Förrätter (1023) Lunch (132) Middag (832) Efterrätter (231) mer utmaning: ta in fler komponenter som filtrerar recept utifrån olika villkor, se t ex https://www.ica.se/recept/ för inspiration Komponentbibliotek: https://material.angular.io/
