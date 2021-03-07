@@ -2,25 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
-import { RecipiesComponent } from './recipies/recipies.component';
+import { RecipesOverviewComponent } from './recipes/recipes-overview/recipes-overview.component';
 import { PostsComponent } from './posts/posts.component';
-
 
 const routes: Routes = [
   {
-    path: 'recipies',
-    component: RecipiesComponent,
+    path: 'recipes',
+    component: RecipesOverviewComponent,
   },
   {
     path: 'posts',
-    component: PostsComponent
-  }
-]
+    component: PostsComponent,
+  },
+];
 
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

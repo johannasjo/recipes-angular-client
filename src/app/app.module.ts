@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostsComponent } from './posts/posts.component';
+import { RecipesOverviewComponent } from './recipes/recipes-overview/recipes-overview.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { PostsComponent } from './posts/posts.component';
     MatButtonModule,
   ],
 
-  declarations: [AppComponent, HeaderComponent, PostsComponent],
+  declarations: [AppComponent, HeaderComponent, PostsComponent, RecipesOverviewComponent],
 
   providers: [],
   bootstrap: [AppComponent],
