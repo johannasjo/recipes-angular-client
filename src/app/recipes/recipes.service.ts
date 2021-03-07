@@ -12,18 +12,20 @@ export class RecipesService {
   appId: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'https://api.edamam.com/search';
-    this.appKey = 'b5233a5a4394984e19750182917c824f';
+    this.baseUrl = 'https://api.spoonacular.com';
+    this.appKey = '26ec59dbfbee4da2932d48a29dd9a7f8';
     this.appId = '5b87a875';
   }
 
-  getAll() {
-    const params = new HttpParams();
-    params.append('app_key', this.appKey);
-    params.append('app_id', this.appId);
-    params.append('q', 'chicken');
-    return this.http.get<Recipe[]>(this.baseUrl, { params });
+  getAll(query: string) {
+    const params = new HttpParams().set('apiKey', this.appKey);
+
+    if (query) {
+      params.set('query', query)
+    }
+    
+    console.log(params.toString())
+    return this.http.get<Recipe[]>(`${this.baseUrl}/recipes/complexSearch`, { params });
   }
 }
 
-// https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
